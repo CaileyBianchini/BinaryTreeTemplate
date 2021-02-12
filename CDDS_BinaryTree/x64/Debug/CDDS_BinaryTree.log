@@ -1,3 +1,5 @@
 ﻿  BinaryTree.cpp
-C:\Users\lodis.perkins\Documents\GitHub\BinaryTreeTemplate\CDDS_BinaryTree\BinaryTree.cpp(98): error C4716: 'BinaryTree::find': must return a value
-C:\Users\lodis.perkins\Documents\GitHub\BinaryTreeTemplate\CDDS_BinaryTree\BinaryTree.cpp(122): error C4716: 'BinaryTree::findNode': must return a value
+  TreeNode.cpp
+  Generating Code...
+C:\Users\s208042\Documents\Projects\Tree\CDDS_BinaryTree\BinaryTree.cpp(98): error C4716: 'BinaryTree::find': must return a value
+C:\Users\s208042\Documents\Projects\Tree\CDDS_BinaryTree\BinaryTree.cpp(122): error C4716: 'BinaryTree::findNode': must return a value
