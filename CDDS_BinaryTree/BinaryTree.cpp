@@ -61,6 +61,7 @@ void BinaryTree::insert(int value)
 	}
 }
 
+//do last
 void BinaryTree::remove(int value)
 {
 	//Create two TreeNode pointers: one to hold a reference to the node we want to remove
@@ -114,15 +115,31 @@ void BinaryTree::remove(int value)
 TreeNode* BinaryTree::find(int value)
 {
 	//Initialize an iterator starting at the root.
+	TreeNode* iter = m_root;
 
 	//Loop through the tree while the iterator isn't nullptr.
+	while (iter != nullptr)
+	{
 		//Check if the node has the data we want
+		if (iter->getData() == value)
+		{
 			//Return the iterator
+			return iter;
+		}
 		//If the node doesn't have the data we want, check to see if it's higher in value.
+		if (iter->getData() != value && value > iter->getData())
+		{
 			//Set the iterator to be its current right child.
+			
+		}
 		//If the node doesn't have the data we want, check to see if it's lower in value.
+		if (iter->getData() != value && value < iter->getData())
+		{
 			//Set the iterator to be its current left child.
+			/*iter->setLeft()->getData();*/
+		}
 	//end loop
+	}
 
 	return nullptr;
 }
@@ -134,21 +151,40 @@ void BinaryTree::draw(TreeNode* selected)
 
 bool BinaryTree::findNode(int searchValue, TreeNode*& nodeFound, TreeNode*& nodeParent)
 {
-	
 	//Create two iterators: one that will point to the current node to compare the search value to,
 	//and the other to hold a reference to the parent.
+	TreeNode* iter = nodeFound;
+	TreeNode* iter2 = nodeParent;
 
 	//Loop while the current node iterator isn't nullptr/
+	while (iter != nullptr)
+	{
 		//Check if the search value is the same as the current nodes data.
-			//Set the node found argument to be the current node and the parent node to be the parent node iterator.
-			//Return true.
+		if (iter->getData() == searchValue)
+		{
+			//Set the node found argument to be the current node and the parent node to be the parent node iterator. 
+			//In the parameters for that function, there's nodeParent, and the second line of comments says "and the other to hold a reference to the parent"
+			nodeFound->setData(searchValue);
+			nodeParent = iter2;
+			return true;
+		}
 		//Check if the search value is greater than the value at the current node.
+		if (iter->getData() >= searchValue)
+		{
 			//Set the parent node to be the current node.
+			iter->setData(searchValue);
 			//Set the current node to be the child to the right of the current node.
+			iter->getRight()->getData();
+		}
 		//Check if the search value is less than the value at the current node.
+		if (iter->getData() <= searchValue)
+		{
 			//Set the parent node to be the current node.
+			nodeParent = iter;
 			//Set the current node to be its left child.
-	//end loop
+			iter->setLeft(iter);
+		}
+	}
 
 	//Return false.
 	return false;
