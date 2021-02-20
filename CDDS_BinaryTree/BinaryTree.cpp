@@ -66,9 +66,16 @@ void BinaryTree::remove(int value)
 {
 	//Create two TreeNode pointers: one to hold a reference to the node we want to remove
 	//and another to hold a reference to its parent.
+	TreeNode* referenceRemove;
+	TreeNode* refernceParent;
+
 
 	//Try to find the node that matches the value given and its parent in the tree.
 	//If the node cannot be found return.
+	if ()
+	{
+
+	}
 
 
 	//Check to see if the node has a right
@@ -130,13 +137,14 @@ TreeNode* BinaryTree::find(int value)
 		if (iter->getData() != value && value > iter->getData())
 		{
 			//Set the iterator to be its current right child.
+			iter->getRight()->getData();
 			
 		}
 		//If the node doesn't have the data we want, check to see if it's lower in value.
 		if (iter->getData() != value && value < iter->getData())
 		{
 			//Set the iterator to be its current left child.
-			/*iter->setLeft()->getData();*/
+			iter->getLeft()->getData();
 		}
 	//end loop
 	}
