@@ -25,7 +25,7 @@ void BinaryTree::insert(int value)
 	while (currentNode != nullptr)
 	{
 		//Check if the value we want to add to the tree is less than the value at the current node.
-		if (value < currentNode->getLeft()->getData())
+		if (value < currentNode->getData())
 		{
 			//Set the parent node to be the current node before the current node moves positions.
 			currentNode = currentNode;
@@ -34,7 +34,7 @@ void BinaryTree::insert(int value)
 		}
 
 		//Check if the value we want to add to the tree is greater than the value at the current node.
-		else if (value > currentNode->getRight()->getData())
+		else if (value > currentNode->getData())
 		{
 			//Set the parent node to be the current node before the current node moves positions.
 			currentNode = currentNode;
