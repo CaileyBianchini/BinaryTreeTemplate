@@ -46,7 +46,7 @@ void BinaryTree::insert(int value)
 			return;
 		}
 
-	 //end loop
+		return;
 	}
 
 	//If the value we want to add is less than the value of the parent node, insert the value to the left.
@@ -66,22 +66,23 @@ void BinaryTree::remove(int value)
 {
 	//Create two TreeNode pointers: one to hold a reference to the node we want to remove
 	//and another to hold a reference to its parent.
-	TreeNode* referenceRemove;
-	TreeNode* refernceParent;
+	TreeNode* currentNode;
+	TreeNode* parentNode;
 
 
 	//Try to find the node that matches the value given and its parent in the tree.
+	findNode(value, currentNode, parentNode);
 	//If the node cannot be found return.
-	if ()
-	{
-
-	}
+	if (!currentNode)
+		return;
 
 
 	//Check to see if the node has a right
-
+	if (currentNode->hasRight())
+	{
 		//Initialize two iterators to find the node whose data will be copied and its parent.
-
+		int iter = currentNode->getData();
+		int iter2 = parentNode->getData();
 		//Set the first iterator to point to the right child of the node we want to remove.
 
 		//Loop while the first iterator has a value to its left
@@ -102,9 +103,10 @@ void BinaryTree::remove(int value)
 				//Set the right child of the second iterator to be the right child of the first iterator.
 
 		//Delete the first iterator
-
+	}
 	//Otherwise, if the node doesn't have a right child
-
+	else
+	{
 		//check if the parent of the node to remove has a left child.
 			//Check if the data that the left child holds is the same as the data the node to remove holds.
 				//Set the left child of the parent node to be the left child of the node to remove.
@@ -117,6 +119,7 @@ void BinaryTree::remove(int value)
 			//Set the root to be its left child.
 
 		//Delete the pointer that points to the node to remove.
+	}
 }
 
 TreeNode* BinaryTree::find(int value)
