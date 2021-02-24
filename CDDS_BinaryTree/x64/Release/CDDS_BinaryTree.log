@@ -1,9 +1,7 @@
 ﻿  BinaryTree.cpp
-C:\Users\s208042\Documents\Projects\BinaryTreeTemplate\CDDS_BinaryTree\BinaryTree.cpp(108,22): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\s208042\Documents\Projects\BinaryTreeTemplate\CDDS_BinaryTree\BinaryTree.cpp(118,23): warning C4553: '==': result of expression not used; did you intend '='?
   Generating code
-  2 of 44 functions ( 4.5%) were compiled, the rest were copied from previous compilation.
+  3 of 44 functions ( 6.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    4 functions had inline decision re-evaluated but remain unchanged
+    2 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   CDDS_BinaryTree.vcxproj -> C:\Users\s208042\Documents\Projects\BinaryTreeTemplate\bin\x64\Release\CDDS_BinaryTree.exe
